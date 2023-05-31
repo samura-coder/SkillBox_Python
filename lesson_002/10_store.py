@@ -85,7 +85,7 @@ chair_item_3 = store[chair_code][2]
 chair_quantity_3 = chair_item_3['quantity']
 chair_price_3 = chair_item_3['price']
 sofas_quantity_total = chair_quantity_1 + chair_quantity_2 + chair_quantity_3
-sofas_cost_total = sofa_quantity_1 * sofa_price_1 + sofa_quantity_2 * sofa_price_2 + chair_quantity_3 * chair_price_3
+sofas_cost_total = chair_quantity_1 * chair_price_1 + chair_quantity_2 * chair_price_2 + chair_quantity_3 * chair_price_3
 print('Стул -', sofas_quantity_total, 'шт, стоимость', sofas_cost_total, 'руб.')
 
 ##########################################################################################

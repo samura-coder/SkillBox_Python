@@ -10,4 +10,11 @@
 
 a, b = 179, 37
 
-# TODO здесь ваш код
+number = 0
+step = 0
+
+while number <= a:
+    step += 1
+    number = b * step
+
+print(f"Целочисленное деление {a} на {b} дает {step}.")

@@ -11,4 +11,17 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+parental_help = 0
+month_counter = 1
+total_expenses = expenses
+indexation = 1.03
+quantity_number = 10
+
+while month_counter < quantity_number:
+    expenses *= indexation
+    total_expenses += expenses
+    month_counter += 1
+
+parental_help = round(total_expenses - educational_grant * quantity_number, 2)
+
+print('Студенту необходимо попросить у родителей', parental_help, 'руб.')

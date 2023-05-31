@@ -35,13 +35,15 @@ store = {
 # например для ламп
 
 lamps_cost = store[goods['Лампа']][0]['quantity'] * store[goods['Лампа']][0]['price']
+
 # или проще (/сложнее ?)
+
 lamp_code = goods['Лампа']
 lamps_item = store[lamp_code][0]
 lamps_quantity = lamps_item['quantity']
 lamps_price = lamps_item['price']
 lamps_cost = lamps_quantity * lamps_price
-print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб')
+print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, 'руб.')
 
 # Вывести стоимость каждого товара на складе: один раз распечать сколько всего столов, стульев и т.д. на складе
 # Формат строки <товар> - <кол-во> шт, стоимость <общая стоимость> руб
@@ -49,7 +51,42 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # WARNING для знающих циклы: БЕЗ циклов. Да, с переменными; да, неэффективно; да, копипаста.
 # Это задание на ручное вычисление - что бы потом понять как работают циклы и насколько с ними проще жить.
 
-# TODO здесь ваш код
+
+table_code = goods['Стол']
+table_item_1 = store[table_code][0]
+table_quantity_1 = table_item_1['quantity']
+table_price_1 = table_item_1['price']
+table_item_2 = store[table_code][1]
+table_quantity_2 = table_item_2['quantity']
+table_price_2 = table_item_2['price']
+tables_quantity_total = table_quantity_1 + table_quantity_2
+tables_cost_total = table_quantity_1 * table_price_1 + table_quantity_2 * table_price_2
+print('Стол -', tables_quantity_total, 'шт, стоимость', tables_cost_total, 'руб.')
+
+sofa_code = goods['Диван']
+sofa_item_1 = store[sofa_code][0]
+sofa_quantity_1 = sofa_item_1['quantity']
+sofa_price_1 = sofa_item_1['price']
+sofa_item_2 = store[sofa_code][1]
+sofa_quantity_2 = sofa_item_2['quantity']
+sofa_price_2 = sofa_item_2['price']
+sofas_quantity_total = sofa_quantity_1 + sofa_quantity_2
+sofas_cost_total = sofa_quantity_1 * sofa_price_1 + sofa_quantity_2 * sofa_price_2
+print('Диван -', sofas_quantity_total, 'шт, стоимость', sofas_cost_total, 'руб.')
+
+chair_code = goods['Стул']
+chair_item_1 = store[chair_code][0]
+chair_quantity_1 = chair_item_1['quantity']
+chair_price_1 = chair_item_1['price']
+chair_item_2 = store[chair_code][1]
+chair_quantity_2 = chair_item_2['quantity']
+chair_price_2 = chair_item_2['price']
+chair_item_3 = store[chair_code][2]
+chair_quantity_3 = chair_item_3['quantity']
+chair_price_3 = chair_item_3['price']
+sofas_quantity_total = chair_quantity_1 + chair_quantity_2 + chair_quantity_3
+sofas_cost_total = sofa_quantity_1 * sofa_price_1 + sofa_quantity_2 * sofa_price_2 + chair_quantity_3 * chair_price_3
+print('Стул -', sofas_quantity_total, 'шт, стоимость', sofas_cost_total, 'руб.')
 
 ##########################################################################################
 # ВНИМАНИЕ! После того как __ВСЯ__ домашняя работа сделана и запушена на сервер,         #
@@ -57,9 +94,3 @@ print('Лампа -', lamps_quantity, 'шт, стоимость', lamps_cost, '�
 # и оформить попытку сдачи ДЗ! Без этого ДЗ не будет проверяться!                        #
 # Как оформить попытку сдачи смотрите видео - https://youtu.be/qVpN0L-C3LU               #
 ##########################################################################################
-
-
-
-
-
-
